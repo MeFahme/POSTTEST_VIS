@@ -22,17 +22,26 @@ Partial Class FormRiwayatTransaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         pnlBody = New Panel()
         pnlDetail = New Panel()
+        Label12 = New Label()
+        dgvDetail = New DataGridView()
+        Label11 = New Label()
+        lblDetTotal = New Label()
+        lblDetWaktu = New Label()
+        lblDetJenis = New Label()
+        lblDetNoHp = New Label()
+        lblDetPelanggan = New Label()
+        lblDetStatus = New Label()
         lblDetNoTrx = New Label()
         Label9 = New Label()
         Label8 = New Label()
@@ -42,7 +51,13 @@ Partial Class FormRiwayatTransaksi
         Label4 = New Label()
         Label3 = New Label()
         pnlServiceInfo = New Panel()
-        DataGridView1 = New DataGridView()
+        lblDetStatusMotor = New Label()
+        lblDetBiayaJasa = New Label()
+        lblDetServis = New Label()
+        Label15 = New Label()
+        Label14 = New Label()
+        Label13 = New Label()
+        dgvRiwayat = New DataGridView()
         pnlToolbar = New Panel()
         btnHariIni = New Guna.UI2.WinForms.Guna2Button()
         btnTampilkan = New Guna.UI2.WinForms.Guna2Button()
@@ -51,35 +66,20 @@ Partial Class FormRiwayatTransaksi
         Label2 = New Label()
         Label1 = New Label()
         Panel3 = New Panel()
-        lblDetStatus = New Label()
-        lblDetPelanggan = New Label()
-        lblDetNoHp = New Label()
-        lblDetJenis = New Label()
-        lblDetWaktu = New Label()
-        lblDetTotal = New Label()
-        Label11 = New Label()
-        dgvDetail = New DataGridView()
-        Label12 = New Label()
-        Label13 = New Label()
-        Label14 = New Label()
-        Label15 = New Label()
-        lblDetServis = New Label()
-        lblDetBiayaJasa = New Label()
-        lblDetStatusMotor = New Label()
         lblStatusBar = New Label()
         pnlBody.SuspendLayout()
         pnlDetail.SuspendLayout()
+        CType(dgvDetail, ComponentModel.ISupportInitialize).BeginInit()
         pnlServiceInfo.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvRiwayat, ComponentModel.ISupportInitialize).BeginInit()
         pnlToolbar.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(dgvDetail, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' pnlBody
         ' 
         pnlBody.Controls.Add(pnlDetail)
-        pnlBody.Controls.Add(DataGridView1)
+        pnlBody.Controls.Add(dgvRiwayat)
         pnlBody.Location = New Point(0, 46)
         pnlBody.Name = "pnlBody"
         pnlBody.Size = New Size(1020, 629)
@@ -110,6 +110,120 @@ Partial Class FormRiwayatTransaksi
         pnlDetail.Name = "pnlDetail"
         pnlDetail.Size = New Size(300, 629)
         pnlDetail.TabIndex = 1
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label12.ForeColor = Color.DarkGray
+        Label12.Location = New Point(7, 582)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(83, 15)
+        Label12.TabIndex = 29
+        Label12.Text = "TOTAL BAYAR"
+        ' 
+        ' dgvDetail
+        ' 
+        dgvDetail.BackgroundColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
+        dgvDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvDetail.DefaultCellStyle = DataGridViewCellStyle1
+        dgvDetail.Location = New Point(7, 304)
+        dgvDetail.Name = "dgvDetail"
+        dgvDetail.ReadOnly = True
+        dgvDetail.RowHeadersVisible = False
+        dgvDetail.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvDetail.Size = New Size(287, 135)
+        dgvDetail.TabIndex = 28
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label11.ForeColor = Color.DarkGray
+        Label11.Location = New Point(5, 286)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(84, 15)
+        Label11.TabIndex = 27
+        Label11.Text = "DAFTAR PART"
+        ' 
+        ' lblDetTotal
+        ' 
+        lblDetTotal.AutoSize = True
+        lblDetTotal.BackColor = Color.Transparent
+        lblDetTotal.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDetTotal.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        lblDetTotal.Location = New Point(5, 597)
+        lblDetTotal.Name = "lblDetTotal"
+        lblDetTotal.Size = New Size(40, 21)
+        lblDetTotal.TabIndex = 26
+        lblDetTotal.Text = "Rp -"
+        ' 
+        ' lblDetWaktu
+        ' 
+        lblDetWaktu.AutoSize = True
+        lblDetWaktu.BackColor = Color.Transparent
+        lblDetWaktu.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetWaktu.ForeColor = Color.White
+        lblDetWaktu.Location = New Point(6, 220)
+        lblDetWaktu.Name = "lblDetWaktu"
+        lblDetWaktu.Size = New Size(12, 15)
+        lblDetWaktu.TabIndex = 25
+        lblDetWaktu.Text = "-"
+        ' 
+        ' lblDetJenis
+        ' 
+        lblDetJenis.AutoSize = True
+        lblDetJenis.BackColor = Color.Transparent
+        lblDetJenis.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetJenis.ForeColor = Color.White
+        lblDetJenis.Location = New Point(4, 178)
+        lblDetJenis.Name = "lblDetJenis"
+        lblDetJenis.Size = New Size(12, 15)
+        lblDetJenis.TabIndex = 24
+        lblDetJenis.Text = "-"
+        ' 
+        ' lblDetNoHp
+        ' 
+        lblDetNoHp.AutoSize = True
+        lblDetNoHp.BackColor = Color.Transparent
+        lblDetNoHp.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetNoHp.ForeColor = Color.White
+        lblDetNoHp.Location = New Point(5, 135)
+        lblDetNoHp.Name = "lblDetNoHp"
+        lblDetNoHp.Size = New Size(12, 15)
+        lblDetNoHp.TabIndex = 23
+        lblDetNoHp.Text = "-"
+        ' 
+        ' lblDetPelanggan
+        ' 
+        lblDetPelanggan.AutoSize = True
+        lblDetPelanggan.BackColor = Color.Transparent
+        lblDetPelanggan.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetPelanggan.ForeColor = Color.White
+        lblDetPelanggan.Location = New Point(5, 94)
+        lblDetPelanggan.Name = "lblDetPelanggan"
+        lblDetPelanggan.Size = New Size(12, 15)
+        lblDetPelanggan.TabIndex = 22
+        lblDetPelanggan.Text = "-"
+        ' 
+        ' lblDetStatus
+        ' 
+        lblDetStatus.AutoSize = True
+        lblDetStatus.BackColor = Color.Transparent
+        lblDetStatus.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDetStatus.ForeColor = Color.Lime
+        lblDetStatus.Location = New Point(5, 262)
+        lblDetStatus.Name = "lblDetStatus"
+        lblDetStatus.Size = New Size(12, 15)
+        lblDetStatus.TabIndex = 21
+        lblDetStatus.Text = "-"
         ' 
         ' lblDetNoTrx
         ' 
@@ -213,15 +327,86 @@ Partial Class FormRiwayatTransaksi
         pnlServiceInfo.Size = New Size(300, 128)
         pnlServiceInfo.TabIndex = 2
         ' 
-        ' DataGridView1
+        ' lblDetStatusMotor
         ' 
-        DataGridView1.BackgroundColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.GridColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
-        DataGridView1.Location = New Point(0, 0)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(720, 629)
-        DataGridView1.TabIndex = 0
+        lblDetStatusMotor.AutoSize = True
+        lblDetStatusMotor.BackColor = Color.Transparent
+        lblDetStatusMotor.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetStatusMotor.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        lblDetStatusMotor.Location = New Point(146, 100)
+        lblDetStatusMotor.Name = "lblDetStatusMotor"
+        lblDetStatusMotor.Size = New Size(12, 15)
+        lblDetStatusMotor.TabIndex = 34
+        lblDetStatusMotor.Text = "-"
+        ' 
+        ' lblDetBiayaJasa
+        ' 
+        lblDetBiayaJasa.AutoSize = True
+        lblDetBiayaJasa.BackColor = Color.Transparent
+        lblDetBiayaJasa.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetBiayaJasa.ForeColor = Color.White
+        lblDetBiayaJasa.Location = New Point(146, 63)
+        lblDetBiayaJasa.Name = "lblDetBiayaJasa"
+        lblDetBiayaJasa.Size = New Size(12, 15)
+        lblDetBiayaJasa.TabIndex = 33
+        lblDetBiayaJasa.Text = "-"
+        ' 
+        ' lblDetServis
+        ' 
+        lblDetServis.AutoSize = True
+        lblDetServis.BackColor = Color.Transparent
+        lblDetServis.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblDetServis.ForeColor = Color.White
+        lblDetServis.Location = New Point(9, 35)
+        lblDetServis.Name = "lblDetServis"
+        lblDetServis.Size = New Size(12, 15)
+        lblDetServis.TabIndex = 30
+        lblDetServis.Text = "-"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label15.ForeColor = Color.DarkGray
+        Label15.Location = New Point(7, 99)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(93, 15)
+        Label15.TabIndex = 32
+        Label15.Text = "STATUS SERVIS"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label14.ForeColor = Color.DarkGray
+        Label14.Location = New Point(7, 62)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(71, 15)
+        Label14.TabIndex = 31
+        Label14.Text = "BIAYA JASA"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        Label13.ForeColor = Color.DarkGray
+        Label13.Location = New Point(7, 10)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(51, 15)
+        Label13.TabIndex = 30
+        Label13.Text = "MOTOR"
+        ' 
+        ' dgvRiwayat
+        ' 
+        dgvRiwayat.BackgroundColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
+        dgvRiwayat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvRiwayat.Location = New Point(0, 0)
+        dgvRiwayat.Name = "dgvRiwayat"
+        dgvRiwayat.ReadOnly = True
+        dgvRiwayat.RowHeadersVisible = False
+        dgvRiwayat.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvRiwayat.Size = New Size(720, 629)
+        dgvRiwayat.TabIndex = 0
         ' 
         ' pnlToolbar
         ' 
@@ -242,7 +427,7 @@ Partial Class FormRiwayatTransaksi
         btnHariIni.BorderColor = Color.DimGray
         btnHariIni.BorderRadius = 5
         btnHariIni.BorderThickness = 1
-        btnHariIni.CustomizableEdges = CustomizableEdges9
+        btnHariIni.CustomizableEdges = CustomizableEdges1
         btnHariIni.DisabledState.BorderColor = Color.DarkGray
         btnHariIni.DisabledState.CustomBorderColor = Color.DarkGray
         btnHariIni.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -252,7 +437,7 @@ Partial Class FormRiwayatTransaksi
         btnHariIni.ForeColor = Color.White
         btnHariIni.Location = New Point(452, 6)
         btnHariIni.Name = "btnHariIni"
-        btnHariIni.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btnHariIni.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnHariIni.Size = New Size(94, 34)
         btnHariIni.TabIndex = 12
         btnHariIni.Text = "Hari Ini"
@@ -260,7 +445,7 @@ Partial Class FormRiwayatTransaksi
         ' btnTampilkan
         ' 
         btnTampilkan.BorderRadius = 5
-        btnTampilkan.CustomizableEdges = CustomizableEdges11
+        btnTampilkan.CustomizableEdges = CustomizableEdges3
         btnTampilkan.DisabledState.BorderColor = Color.DarkGray
         btnTampilkan.DisabledState.CustomBorderColor = Color.DarkGray
         btnTampilkan.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -270,7 +455,7 @@ Partial Class FormRiwayatTransaksi
         btnTampilkan.ForeColor = Color.White
         btnTampilkan.Location = New Point(339, 6)
         btnTampilkan.Name = "btnTampilkan"
-        btnTampilkan.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnTampilkan.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnTampilkan.Size = New Size(94, 34)
         btnTampilkan.TabIndex = 11
         btnTampilkan.Text = "Tampilkan"
@@ -279,7 +464,7 @@ Partial Class FormRiwayatTransaksi
         ' 
         dtpSampai.BorderRadius = 5
         dtpSampai.Checked = True
-        dtpSampai.CustomizableEdges = CustomizableEdges13
+        dtpSampai.CustomizableEdges = CustomizableEdges5
         dtpSampai.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         dtpSampai.Font = New Font("Segoe UI", 9F)
         dtpSampai.ForeColor = Color.LightGray
@@ -288,7 +473,7 @@ Partial Class FormRiwayatTransaksi
         dtpSampai.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpSampai.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpSampai.Name = "dtpSampai"
-        dtpSampai.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        dtpSampai.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         dtpSampai.Size = New Size(121, 34)
         dtpSampai.TabIndex = 10
         dtpSampai.Value = New Date(2026, 5, 12, 13, 8, 27, 868)
@@ -297,7 +482,7 @@ Partial Class FormRiwayatTransaksi
         ' 
         dtpDari.BorderRadius = 5
         dtpDari.Checked = True
-        dtpDari.CustomizableEdges = CustomizableEdges15
+        dtpDari.CustomizableEdges = CustomizableEdges7
         dtpDari.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         dtpDari.Font = New Font("Segoe UI", 9F)
         dtpDari.ForeColor = Color.LightGray
@@ -306,7 +491,7 @@ Partial Class FormRiwayatTransaksi
         dtpDari.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpDari.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpDari.Name = "dtpDari"
-        dtpDari.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        dtpDari.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         dtpDari.Size = New Size(121, 34)
         dtpDari.TabIndex = 9
         dtpDari.Value = New Date(2026, 5, 12, 13, 8, 27, 868)
@@ -341,187 +526,6 @@ Partial Class FormRiwayatTransaksi
         Panel3.Size = New Size(1020, 26)
         Panel3.TabIndex = 2
         ' 
-        ' lblDetStatus
-        ' 
-        lblDetStatus.AutoSize = True
-        lblDetStatus.BackColor = Color.Transparent
-        lblDetStatus.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblDetStatus.ForeColor = Color.Lime
-        lblDetStatus.Location = New Point(5, 262)
-        lblDetStatus.Name = "lblDetStatus"
-        lblDetStatus.Size = New Size(12, 15)
-        lblDetStatus.TabIndex = 21
-        lblDetStatus.Text = "-"
-        ' 
-        ' lblDetPelanggan
-        ' 
-        lblDetPelanggan.AutoSize = True
-        lblDetPelanggan.BackColor = Color.Transparent
-        lblDetPelanggan.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetPelanggan.ForeColor = Color.White
-        lblDetPelanggan.Location = New Point(5, 94)
-        lblDetPelanggan.Name = "lblDetPelanggan"
-        lblDetPelanggan.Size = New Size(12, 15)
-        lblDetPelanggan.TabIndex = 22
-        lblDetPelanggan.Text = "-"
-        ' 
-        ' lblDetNoHp
-        ' 
-        lblDetNoHp.AutoSize = True
-        lblDetNoHp.BackColor = Color.Transparent
-        lblDetNoHp.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetNoHp.ForeColor = Color.White
-        lblDetNoHp.Location = New Point(5, 135)
-        lblDetNoHp.Name = "lblDetNoHp"
-        lblDetNoHp.Size = New Size(12, 15)
-        lblDetNoHp.TabIndex = 23
-        lblDetNoHp.Text = "-"
-        ' 
-        ' lblDetJenis
-        ' 
-        lblDetJenis.AutoSize = True
-        lblDetJenis.BackColor = Color.Transparent
-        lblDetJenis.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetJenis.ForeColor = Color.White
-        lblDetJenis.Location = New Point(4, 178)
-        lblDetJenis.Name = "lblDetJenis"
-        lblDetJenis.Size = New Size(12, 15)
-        lblDetJenis.TabIndex = 24
-        lblDetJenis.Text = "-"
-        ' 
-        ' lblDetWaktu
-        ' 
-        lblDetWaktu.AutoSize = True
-        lblDetWaktu.BackColor = Color.Transparent
-        lblDetWaktu.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetWaktu.ForeColor = Color.White
-        lblDetWaktu.Location = New Point(6, 220)
-        lblDetWaktu.Name = "lblDetWaktu"
-        lblDetWaktu.Size = New Size(12, 15)
-        lblDetWaktu.TabIndex = 25
-        lblDetWaktu.Text = "-"
-        ' 
-        ' lblDetTotal
-        ' 
-        lblDetTotal.AutoSize = True
-        lblDetTotal.BackColor = Color.Transparent
-        lblDetTotal.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblDetTotal.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
-        lblDetTotal.Location = New Point(5, 597)
-        lblDetTotal.Name = "lblDetTotal"
-        lblDetTotal.Size = New Size(40, 21)
-        lblDetTotal.TabIndex = 26
-        lblDetTotal.Text = "Rp -"
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label11.ForeColor = Color.DarkGray
-        Label11.Location = New Point(5, 286)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(84, 15)
-        Label11.TabIndex = 27
-        Label11.Text = "DAFTAR PART"
-        ' 
-        ' dgvDetail
-        ' 
-        dgvDetail.BackgroundColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
-        dgvDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvDetail.DefaultCellStyle = DataGridViewCellStyle2
-        dgvDetail.GridColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
-        dgvDetail.Location = New Point(7, 304)
-        dgvDetail.Name = "dgvDetail"
-        dgvDetail.Size = New Size(287, 135)
-        dgvDetail.TabIndex = 28
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label12.ForeColor = Color.DarkGray
-        Label12.Location = New Point(7, 582)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(83, 15)
-        Label12.TabIndex = 29
-        Label12.Text = "TOTAL BAYAR"
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label13.ForeColor = Color.DarkGray
-        Label13.Location = New Point(7, 10)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(51, 15)
-        Label13.TabIndex = 30
-        Label13.Text = "MOTOR"
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label14.ForeColor = Color.DarkGray
-        Label14.Location = New Point(7, 62)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(71, 15)
-        Label14.TabIndex = 31
-        Label14.Text = "BIAYA JASA"
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label15.ForeColor = Color.DarkGray
-        Label15.Location = New Point(7, 99)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(93, 15)
-        Label15.TabIndex = 32
-        Label15.Text = "STATUS SERVIS"
-        ' 
-        ' lblDetServis
-        ' 
-        lblDetServis.AutoSize = True
-        lblDetServis.BackColor = Color.Transparent
-        lblDetServis.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetServis.ForeColor = Color.White
-        lblDetServis.Location = New Point(9, 35)
-        lblDetServis.Name = "lblDetServis"
-        lblDetServis.Size = New Size(12, 15)
-        lblDetServis.TabIndex = 30
-        lblDetServis.Text = "-"
-        ' 
-        ' lblDetBiayaJasa
-        ' 
-        lblDetBiayaJasa.AutoSize = True
-        lblDetBiayaJasa.BackColor = Color.Transparent
-        lblDetBiayaJasa.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetBiayaJasa.ForeColor = Color.White
-        lblDetBiayaJasa.Location = New Point(146, 63)
-        lblDetBiayaJasa.Name = "lblDetBiayaJasa"
-        lblDetBiayaJasa.Size = New Size(12, 15)
-        lblDetBiayaJasa.TabIndex = 33
-        lblDetBiayaJasa.Text = "-"
-        ' 
-        ' lblDetStatusMotor
-        ' 
-        lblDetStatusMotor.AutoSize = True
-        lblDetStatusMotor.BackColor = Color.Transparent
-        lblDetStatusMotor.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblDetStatusMotor.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
-        lblDetStatusMotor.Location = New Point(146, 100)
-        lblDetStatusMotor.Name = "lblDetStatusMotor"
-        lblDetStatusMotor.Size = New Size(12, 15)
-        lblDetStatusMotor.TabIndex = 34
-        lblDetStatusMotor.Text = "-"
-        ' 
         ' lblStatusBar
         ' 
         lblStatusBar.AutoSize = True
@@ -543,18 +547,19 @@ Partial Class FormRiwayatTransaksi
         Controls.Add(pnlToolbar)
         Controls.Add(pnlBody)
         Name = "FormRiwayatTransaksi"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormRiwayatTransaksi"
         pnlBody.ResumeLayout(False)
         pnlDetail.ResumeLayout(False)
         pnlDetail.PerformLayout()
+        CType(dgvDetail, ComponentModel.ISupportInitialize).EndInit()
         pnlServiceInfo.ResumeLayout(False)
         pnlServiceInfo.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvRiwayat, ComponentModel.ISupportInitialize).EndInit()
         pnlToolbar.ResumeLayout(False)
         pnlToolbar.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(dgvDetail, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -567,7 +572,7 @@ Partial Class FormRiwayatTransaksi
     Friend WithEvents dtpDari As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvRiwayat As DataGridView
     Friend WithEvents pnlDetail As Panel
     Friend WithEvents pnlServiceInfo As Panel
     Friend WithEvents Label3 As Label

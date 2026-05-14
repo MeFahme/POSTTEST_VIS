@@ -22,16 +22,16 @@ Partial Class FormLaporan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Panel1 = New Panel()
         btnBulanIni = New Guna.UI2.WinForms.Guna2Button()
         btnHariIni = New Guna.UI2.WinForms.Guna2Button()
@@ -95,7 +95,7 @@ Partial Class FormLaporan
         btnBulanIni.BorderColor = Color.DimGray
         btnBulanIni.BorderRadius = 5
         btnBulanIni.BorderThickness = 1
-        btnBulanIni.CustomizableEdges = CustomizableEdges1
+        btnBulanIni.CustomizableEdges = CustomizableEdges21
         btnBulanIni.DisabledState.BorderColor = Color.DarkGray
         btnBulanIni.DisabledState.CustomBorderColor = Color.DarkGray
         btnBulanIni.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -105,7 +105,7 @@ Partial Class FormLaporan
         btnBulanIni.ForeColor = Color.White
         btnBulanIni.Location = New Point(574, 9)
         btnBulanIni.Name = "btnBulanIni"
-        btnBulanIni.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnBulanIni.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         btnBulanIni.Size = New Size(94, 34)
         btnBulanIni.TabIndex = 6
         btnBulanIni.Text = "Bulan Ini"
@@ -115,7 +115,7 @@ Partial Class FormLaporan
         btnHariIni.BorderColor = Color.DimGray
         btnHariIni.BorderRadius = 5
         btnHariIni.BorderThickness = 1
-        btnHariIni.CustomizableEdges = CustomizableEdges3
+        btnHariIni.CustomizableEdges = CustomizableEdges23
         btnHariIni.DisabledState.BorderColor = Color.DarkGray
         btnHariIni.DisabledState.CustomBorderColor = Color.DarkGray
         btnHariIni.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -125,7 +125,7 @@ Partial Class FormLaporan
         btnHariIni.ForeColor = Color.White
         btnHariIni.Location = New Point(461, 9)
         btnHariIni.Name = "btnHariIni"
-        btnHariIni.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnHariIni.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         btnHariIni.Size = New Size(94, 34)
         btnHariIni.TabIndex = 5
         btnHariIni.Text = "Hari Ini"
@@ -133,7 +133,7 @@ Partial Class FormLaporan
         ' btnTampilkan
         ' 
         btnTampilkan.BorderRadius = 5
-        btnTampilkan.CustomizableEdges = CustomizableEdges5
+        btnTampilkan.CustomizableEdges = CustomizableEdges25
         btnTampilkan.DisabledState.BorderColor = Color.DarkGray
         btnTampilkan.DisabledState.CustomBorderColor = Color.DarkGray
         btnTampilkan.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -143,7 +143,7 @@ Partial Class FormLaporan
         btnTampilkan.ForeColor = Color.White
         btnTampilkan.Location = New Point(348, 9)
         btnTampilkan.Name = "btnTampilkan"
-        btnTampilkan.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnTampilkan.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         btnTampilkan.Size = New Size(94, 34)
         btnTampilkan.TabIndex = 4
         btnTampilkan.Text = "Tampilkan"
@@ -152,7 +152,7 @@ Partial Class FormLaporan
         ' 
         dtpSampai.BorderRadius = 5
         dtpSampai.Checked = True
-        dtpSampai.CustomizableEdges = CustomizableEdges7
+        dtpSampai.CustomizableEdges = CustomizableEdges27
         dtpSampai.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         dtpSampai.Font = New Font("Segoe UI", 9F)
         dtpSampai.ForeColor = Color.LightGray
@@ -161,7 +161,7 @@ Partial Class FormLaporan
         dtpSampai.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpSampai.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpSampai.Name = "dtpSampai"
-        dtpSampai.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        dtpSampai.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         dtpSampai.Size = New Size(121, 34)
         dtpSampai.TabIndex = 3
         dtpSampai.Value = New Date(2026, 5, 12, 13, 8, 27, 868)
@@ -170,7 +170,7 @@ Partial Class FormLaporan
         ' 
         dtpDari.BorderRadius = 5
         dtpDari.Checked = True
-        dtpDari.CustomizableEdges = CustomizableEdges9
+        dtpDari.CustomizableEdges = CustomizableEdges29
         dtpDari.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         dtpDari.Font = New Font("Segoe UI", 9F)
         dtpDari.ForeColor = Color.LightGray
@@ -179,7 +179,7 @@ Partial Class FormLaporan
         dtpDari.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         dtpDari.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         dtpDari.Name = "dtpDari"
-        dtpDari.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        dtpDari.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         dtpDari.Size = New Size(121, 34)
         dtpDari.TabIndex = 2
         dtpDari.Value = New Date(2026, 5, 12, 13, 8, 27, 868)
@@ -448,6 +448,9 @@ Partial Class FormLaporan
         dgvLaporan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvLaporan.Location = New Point(6, 198)
         dgvLaporan.Name = "dgvLaporan"
+        dgvLaporan.ReadOnly = True
+        dgvLaporan.RowHeadersVisible = False
+        dgvLaporan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvLaporan.Size = New Size(990, 331)
         dgvLaporan.TabIndex = 0
         ' 
@@ -460,6 +463,7 @@ Partial Class FormLaporan
         Controls.Add(tabLaporan)
         Controls.Add(Panel1)
         Name = "FormLaporan"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormLaporan"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

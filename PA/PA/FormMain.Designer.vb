@@ -22,9 +22,9 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         mnuStrip = New MenuStrip()
         mnuDashboard = New ToolStripMenuItem()
         mnuKelolaUser = New ToolStripMenuItem()
@@ -34,41 +34,42 @@ Partial Class FormMain
         mnuRiwayat = New ToolStripMenuItem()
         mnuDaftarMotor = New ToolStripMenuItem()
         mnuDetailServis = New ToolStripMenuItem()
-        LogoutToolStripMenuItem = New ToolStripMenuItem()
+        mnuUser = New ToolStripMenuItem()
+        mnuLogout = New ToolStripMenuItem()
         pnlToolbar = New Panel()
-        pnlDashboard = New Panel()
         btnRefresh = New Guna.UI2.WinForms.Guna2Button()
-        Label1 = New Label()
+        pnlDashboard = New Panel()
+        dgvStatusMotor = New DataGridView()
+        Label9 = New Label()
         Label2 = New Label()
+        Label1 = New Label()
         pnlKartu = New Panel()
-        pnlTrx = New Panel()
-        Panel4 = New Panel()
-        pnlMotor = New Panel()
-        Panel5 = New Panel()
         pnlStok = New Panel()
-        Panel7 = New Panel()
-        lblTotalTrx = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        lblMotorAktif = New Label()
         Label7 = New Label()
         lblStokKritis = New Label()
-        Label9 = New Label()
-        dgvStatusMotor = New DataGridView()
+        Panel7 = New Panel()
+        pnlMotor = New Panel()
+        Label5 = New Label()
+        lblMotorAktif = New Label()
+        Panel5 = New Panel()
+        pnlTrx = New Panel()
+        Label4 = New Label()
+        lblTotalTrx = New Label()
+        Panel4 = New Panel()
         mnuStrip.SuspendLayout()
         pnlToolbar.SuspendLayout()
         pnlDashboard.SuspendLayout()
-        pnlKartu.SuspendLayout()
-        pnlTrx.SuspendLayout()
-        pnlMotor.SuspendLayout()
-        pnlStok.SuspendLayout()
         CType(dgvStatusMotor, ComponentModel.ISupportInitialize).BeginInit()
+        pnlKartu.SuspendLayout()
+        pnlStok.SuspendLayout()
+        pnlMotor.SuspendLayout()
+        pnlTrx.SuspendLayout()
         SuspendLayout()
         ' 
         ' mnuStrip
         ' 
         mnuStrip.BackColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
-        mnuStrip.Items.AddRange(New ToolStripItem() {mnuDashboard, mnuKelolaUser, mnuSparepart, mnuLaporan, mnuTransaksi, mnuRiwayat, mnuDaftarMotor, mnuDetailServis, LogoutToolStripMenuItem})
+        mnuStrip.Items.AddRange(New ToolStripItem() {mnuDashboard, mnuKelolaUser, mnuSparepart, mnuLaporan, mnuTransaksi, mnuRiwayat, mnuDaftarMotor, mnuDetailServis, mnuUser, mnuLogout})
         mnuStrip.Location = New Point(0, 0)
         mnuStrip.Name = "mnuStrip"
         mnuStrip.Size = New Size(974, 25)
@@ -96,8 +97,8 @@ Partial Class FormMain
         mnuSparepart.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         mnuSparepart.ForeColor = Color.LightGray
         mnuSparepart.Name = "mnuSparepart"
-        mnuSparepart.Size = New Size(79, 21)
-        mnuSparepart.Text = "Sparepart"
+        mnuSparepart.Size = New Size(121, 21)
+        mnuSparepart.Text = "Kelola Sparepart"
         ' 
         ' mnuLaporan
         ' 
@@ -139,43 +140,40 @@ Partial Class FormMain
         mnuDetailServis.Size = New Size(98, 21)
         mnuDetailServis.Text = "Detail Servis"
         ' 
-        ' LogoutToolStripMenuItem
+        ' mnuUser
         ' 
-        LogoutToolStripMenuItem.Alignment = ToolStripItemAlignment.Right
-        LogoutToolStripMenuItem.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        LogoutToolStripMenuItem.ForeColor = Color.Red
-        LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        LogoutToolStripMenuItem.Size = New Size(64, 21)
-        LogoutToolStripMenuItem.Text = "Logout"
+        mnuUser.Alignment = ToolStripItemAlignment.Right
+        mnuUser.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        mnuUser.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        mnuUser.Name = "mnuUser"
+        mnuUser.Size = New Size(47, 21)
+        mnuUser.Text = "User"
+        ' 
+        ' mnuLogout
+        ' 
+        mnuLogout.Alignment = ToolStripItemAlignment.Right
+        mnuLogout.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        mnuLogout.ForeColor = Color.Red
+        mnuLogout.Name = "mnuLogout"
+        mnuLogout.Size = New Size(64, 21)
+        mnuLogout.Text = "Logout"
         ' 
         ' pnlToolbar
         ' 
-        pnlToolbar.BackColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
+        pnlToolbar.BackColor = Color.FromArgb(CByte(24), CByte(27), CByte(40))
         pnlToolbar.Controls.Add(btnRefresh)
-        pnlToolbar.Location = New Point(0, 24)
+        pnlToolbar.Dock = DockStyle.Top
+        pnlToolbar.Location = New Point(0, 25)
         pnlToolbar.Name = "pnlToolbar"
         pnlToolbar.Size = New Size(974, 51)
         pnlToolbar.TabIndex = 1
-        ' 
-        ' pnlDashboard
-        ' 
-        pnlDashboard.BackColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
-        pnlDashboard.Controls.Add(dgvStatusMotor)
-        pnlDashboard.Controls.Add(Label9)
-        pnlDashboard.Controls.Add(Label2)
-        pnlDashboard.Controls.Add(Label1)
-        pnlDashboard.Controls.Add(pnlKartu)
-        pnlDashboard.Location = New Point(0, 73)
-        pnlDashboard.Name = "pnlDashboard"
-        pnlDashboard.Size = New Size(974, 528)
-        pnlDashboard.TabIndex = 2
         ' 
         ' btnRefresh
         ' 
         btnRefresh.BorderColor = Color.DimGray
         btnRefresh.BorderThickness = 1
         btnRefresh.CustomBorderColor = Color.White
-        btnRefresh.CustomizableEdges = CustomizableEdges3
+        btnRefresh.CustomizableEdges = CustomizableEdges1
         btnRefresh.DisabledState.BorderColor = Color.DarkGray
         btnRefresh.DisabledState.CustomBorderColor = Color.DarkGray
         btnRefresh.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -185,10 +183,71 @@ Partial Class FormMain
         btnRefresh.ForeColor = Color.LightGray
         btnRefresh.Location = New Point(12, 10)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnRefresh.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnRefresh.Size = New Size(103, 33)
         btnRefresh.TabIndex = 0
         btnRefresh.Text = "↻  Refresh"
+        ' 
+        ' pnlDashboard
+        ' 
+        pnlDashboard.BackColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
+        pnlDashboard.Controls.Add(dgvStatusMotor)
+        pnlDashboard.Controls.Add(Label9)
+        pnlDashboard.Controls.Add(Label2)
+        pnlDashboard.Controls.Add(Label1)
+        pnlDashboard.Controls.Add(pnlKartu)
+        pnlDashboard.Dock = DockStyle.Fill
+        pnlDashboard.Location = New Point(0, 76)
+        pnlDashboard.Name = "pnlDashboard"
+        pnlDashboard.Size = New Size(974, 531)
+        pnlDashboard.TabIndex = 2
+        ' 
+        ' dgvStatusMotor
+        ' 
+        dgvStatusMotor.AllowUserToAddRows = False
+        dgvStatusMotor.AllowUserToDeleteRows = False
+        dgvStatusMotor.AllowUserToOrderColumns = True
+        dgvStatusMotor.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvStatusMotor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvStatusMotor.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells
+        dgvStatusMotor.BackgroundColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
+        dgvStatusMotor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvStatusMotor.DefaultCellStyle = DataGridViewCellStyle1
+        dgvStatusMotor.Location = New Point(17, 253)
+        dgvStatusMotor.Name = "dgvStatusMotor"
+        dgvStatusMotor.ReadOnly = True
+        dgvStatusMotor.RowHeadersVisible = False
+        dgvStatusMotor.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvStatusMotor.Size = New Size(940, 260)
+        dgvStatusMotor.TabIndex = 4
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
+        Label9.Location = New Point(17, 217)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(149, 21)
+        Label9.TabIndex = 3
+        Label9.Text = "Status Motor Aktif"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.ForeColor = Color.LightGray
+        Label2.Location = New Point(17, 68)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(150, 15)
+        Label2.TabIndex = 1
+        Label2.Text = "Ringkasan Aktivitas Hari Ini"
         ' 
         ' Label1
         ' 
@@ -201,16 +260,6 @@ Partial Class FormMain
         Label1.TabIndex = 0
         Label1.Text = "Dashboard"
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.ForeColor = Color.LightGray
-        Label2.Location = New Point(17, 68)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(150, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Ringkasan Aktivitas Hari Ini"
-        ' 
         ' pnlKartu
         ' 
         pnlKartu.Controls.Add(pnlStok)
@@ -219,46 +268,10 @@ Partial Class FormMain
         pnlKartu.Controls.Add(Panel5)
         pnlKartu.Controls.Add(pnlTrx)
         pnlKartu.Controls.Add(Panel4)
-        pnlKartu.Location = New Point(17, 101)
+        pnlKartu.Location = New Point(17, 104)
         pnlKartu.Name = "pnlKartu"
-        pnlKartu.Size = New Size(708, 86)
+        pnlKartu.Size = New Size(940, 86)
         pnlKartu.TabIndex = 2
-        ' 
-        ' pnlTrx
-        ' 
-        pnlTrx.BackColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
-        pnlTrx.Controls.Add(Label4)
-        pnlTrx.Controls.Add(lblTotalTrx)
-        pnlTrx.Location = New Point(0, 0)
-        pnlTrx.Name = "pnlTrx"
-        pnlTrx.Size = New Size(205, 86)
-        pnlTrx.TabIndex = 0
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
-        Panel4.Location = New Point(199, 0)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(10, 86)
-        Panel4.TabIndex = 0
-        ' 
-        ' pnlMotor
-        ' 
-        pnlMotor.BackColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
-        pnlMotor.Controls.Add(Label5)
-        pnlMotor.Controls.Add(lblMotorAktif)
-        pnlMotor.Location = New Point(249, 0)
-        pnlMotor.Name = "pnlMotor"
-        pnlMotor.Size = New Size(205, 86)
-        pnlMotor.TabIndex = 1
-        ' 
-        ' Panel5
-        ' 
-        Panel5.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
-        Panel5.Location = New Point(448, 0)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(10, 86)
-        Panel5.TabIndex = 2
         ' 
         ' pnlStok
         ' 
@@ -269,58 +282,6 @@ Partial Class FormMain
         pnlStok.Name = "pnlStok"
         pnlStok.Size = New Size(205, 86)
         pnlStok.TabIndex = 3
-        ' 
-        ' Panel7
-        ' 
-        Panel7.BackColor = Color.Red
-        Panel7.Location = New Point(694, 0)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(10, 86)
-        Panel7.TabIndex = 4
-        ' 
-        ' lblTotalTrx
-        ' 
-        lblTotalTrx.AutoSize = True
-        lblTotalTrx.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTotalTrx.ForeColor = SystemColors.ButtonFace
-        lblTotalTrx.Location = New Point(14, 11)
-        lblTotalTrx.Name = "lblTotalTrx"
-        lblTotalTrx.Size = New Size(38, 45)
-        lblTotalTrx.TabIndex = 0
-        lblTotalTrx.Text = "0"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
-        Label4.Location = New Point(22, 57)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(115, 17)
-        Label4.TabIndex = 1
-        Label4.Text = "Transaksi Hari Ini"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
-        Label5.Location = New Point(26, 57)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(156, 17)
-        Label5.TabIndex = 3
-        Label5.Text = "Motor Sedang Diservice"
-        ' 
-        ' lblMotorAktif
-        ' 
-        lblMotorAktif.AutoSize = True
-        lblMotorAktif.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblMotorAktif.ForeColor = SystemColors.ButtonFace
-        lblMotorAktif.Location = New Point(18, 11)
-        lblMotorAktif.Name = "lblMotorAktif"
-        lblMotorAktif.Size = New Size(38, 45)
-        lblMotorAktif.TabIndex = 2
-        lblMotorAktif.Text = "0"
         ' 
         ' Label7
         ' 
@@ -344,58 +305,119 @@ Partial Class FormMain
         lblStokKritis.TabIndex = 4
         lblStokKritis.Text = "0"
         ' 
-        ' Label9
+        ' Panel7
         ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
-        Label9.Location = New Point(17, 217)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(149, 21)
-        Label9.TabIndex = 3
-        Label9.Text = "Status Motor Aktif"
+        Panel7.BackColor = Color.Red
+        Panel7.Location = New Point(694, 0)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(10, 86)
+        Panel7.TabIndex = 4
         ' 
-        ' dgvStatusMotor
+        ' pnlMotor
         ' 
-        dgvStatusMotor.BackgroundColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
-        dgvStatusMotor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dgvStatusMotor.DefaultCellStyle = DataGridViewCellStyle2
-        dgvStatusMotor.GridColor = Color.FromArgb(CByte(30), CByte(33), CByte(48))
-        dgvStatusMotor.Location = New Point(17, 253)
-        dgvStatusMotor.Name = "dgvStatusMotor"
-        dgvStatusMotor.Size = New Size(940, 260)
-        dgvStatusMotor.TabIndex = 4
+        pnlMotor.BackColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
+        pnlMotor.Controls.Add(Label5)
+        pnlMotor.Controls.Add(lblMotorAktif)
+        pnlMotor.Location = New Point(249, 0)
+        pnlMotor.Name = "pnlMotor"
+        pnlMotor.Size = New Size(205, 86)
+        pnlMotor.TabIndex = 1
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
+        Label5.Location = New Point(26, 57)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(156, 17)
+        Label5.TabIndex = 3
+        Label5.Text = "Motor Sedang Diservice"
+        ' 
+        ' lblMotorAktif
+        ' 
+        lblMotorAktif.AutoSize = True
+        lblMotorAktif.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblMotorAktif.ForeColor = SystemColors.ButtonFace
+        lblMotorAktif.Location = New Point(18, 11)
+        lblMotorAktif.Name = "lblMotorAktif"
+        lblMotorAktif.Size = New Size(38, 45)
+        lblMotorAktif.TabIndex = 2
+        lblMotorAktif.Text = "0"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
+        Panel5.Location = New Point(448, 0)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(10, 86)
+        Panel5.TabIndex = 2
+        ' 
+        ' pnlTrx
+        ' 
+        pnlTrx.BackColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
+        pnlTrx.Controls.Add(Label4)
+        pnlTrx.Controls.Add(lblTotalTrx)
+        pnlTrx.Location = New Point(0, 0)
+        pnlTrx.Name = "pnlTrx"
+        pnlTrx.Size = New Size(205, 86)
+        pnlTrx.TabIndex = 0
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
+        Label4.Location = New Point(22, 57)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(115, 17)
+        Label4.TabIndex = 1
+        Label4.Text = "Transaksi Hari Ini"
+        ' 
+        ' lblTotalTrx
+        ' 
+        lblTotalTrx.AutoSize = True
+        lblTotalTrx.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotalTrx.ForeColor = SystemColors.ButtonFace
+        lblTotalTrx.Location = New Point(14, 11)
+        lblTotalTrx.Name = "lblTotalTrx"
+        lblTotalTrx.Size = New Size(38, 45)
+        lblTotalTrx.TabIndex = 0
+        lblTotalTrx.Text = "0"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        Panel4.Location = New Point(199, 0)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(10, 86)
+        Panel4.TabIndex = 0
         ' 
         ' FormMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(974, 598)
+        ClientSize = New Size(974, 607)
         Controls.Add(pnlDashboard)
         Controls.Add(pnlToolbar)
         Controls.Add(mnuStrip)
         Name = "FormMain"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormMain"
+        WindowState = FormWindowState.Maximized
         mnuStrip.ResumeLayout(False)
         mnuStrip.PerformLayout()
         pnlToolbar.ResumeLayout(False)
         pnlDashboard.ResumeLayout(False)
         pnlDashboard.PerformLayout()
+        CType(dgvStatusMotor, ComponentModel.ISupportInitialize).EndInit()
         pnlKartu.ResumeLayout(False)
-        pnlTrx.ResumeLayout(False)
-        pnlTrx.PerformLayout()
-        pnlMotor.ResumeLayout(False)
-        pnlMotor.PerformLayout()
         pnlStok.ResumeLayout(False)
         pnlStok.PerformLayout()
-        CType(dgvStatusMotor, ComponentModel.ISupportInitialize).EndInit()
+        pnlMotor.ResumeLayout(False)
+        pnlMotor.PerformLayout()
+        pnlTrx.ResumeLayout(False)
+        pnlTrx.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -409,7 +431,7 @@ Partial Class FormMain
     Friend WithEvents mnuRiwayat As ToolStripMenuItem
     Friend WithEvents mnuDaftarMotor As ToolStripMenuItem
     Friend WithEvents mnuDetailServis As ToolStripMenuItem
-    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuUser As ToolStripMenuItem
     Friend WithEvents pnlToolbar As Panel
     Friend WithEvents pnlDashboard As Panel
     Friend WithEvents btnRefresh As Guna.UI2.WinForms.Guna2Button
@@ -430,4 +452,5 @@ Partial Class FormMain
     Friend WithEvents lblTotalTrx As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents dgvStatusMotor As DataGridView
+    Friend WithEvents mnuLogout As ToolStripMenuItem
 End Class

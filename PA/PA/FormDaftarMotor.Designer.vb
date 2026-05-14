@@ -22,28 +22,28 @@ Partial Class FormDaftarMotor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         tabMotor = New Guna.UI2.WinForms.Guna2TabControl()
         tabAktif = New TabPage()
-        tabSelesai = New TabPage()
-        Panel1 = New Panel()
-        Panel2 = New Panel()
         dgvMotorAktif = New DataGridView()
+        tabSelesai = New TabPage()
         dgvMotorSelesai = New DataGridView()
+        Panel1 = New Panel()
         Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
+        Panel2 = New Panel()
         lblStatusBar = New Label()
         tabMotor.SuspendLayout()
         tabAktif.SuspendLayout()
+        CType(dgvMotorAktif, ComponentModel.ISupportInitialize).BeginInit()
         tabSelesai.SuspendLayout()
+        CType(dgvMotorSelesai, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(dgvMotorAktif, ComponentModel.ISupportInitialize).BeginInit()
-        CType(dgvMotorSelesai, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' tabMotor
@@ -86,6 +86,34 @@ Partial Class FormDaftarMotor
         tabAktif.TabIndex = 0
         tabAktif.Text = "Motor Aktif"
         ' 
+        ' dgvMotorAktif
+        ' 
+        dgvMotorAktif.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        dgvMotorAktif.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvMotorAktif.DefaultCellStyle = DataGridViewCellStyle1
+        dgvMotorAktif.Location = New Point(0, 6)
+        dgvMotorAktif.Name = "dgvMotorAktif"
+        dgvMotorAktif.ReadOnly = True
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvMotorAktif.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvMotorAktif.RowHeadersVisible = False
+        dgvMotorAktif.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvMotorAktif.Size = New Size(692, 402)
+        dgvMotorAktif.TabIndex = 31
+        ' 
         ' tabSelesai
         ' 
         tabSelesai.BackColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
@@ -97,6 +125,34 @@ Partial Class FormDaftarMotor
         tabSelesai.TabIndex = 1
         tabSelesai.Text = "Selesai"
         ' 
+        ' dgvMotorSelesai
+        ' 
+        dgvMotorSelesai.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        dgvMotorSelesai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
+        DataGridViewCellStyle3.SelectionForeColor = Color.White
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvMotorSelesai.DefaultCellStyle = DataGridViewCellStyle3
+        dgvMotorSelesai.Location = New Point(0, 1)
+        dgvMotorSelesai.Name = "dgvMotorSelesai"
+        dgvMotorSelesai.ReadOnly = True
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvMotorSelesai.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        dgvMotorSelesai.RowHeadersVisible = False
+        dgvMotorSelesai.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvMotorSelesai.Size = New Size(692, 402)
+        dgvMotorSelesai.TabIndex = 32
+        ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(24), CByte(27), CByte(40))
@@ -106,70 +162,11 @@ Partial Class FormDaftarMotor
         Panel1.Size = New Size(700, 42)
         Panel1.TabIndex = 1
         ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.FromArgb(CByte(13), CByte(15), CByte(24))
-        Panel2.Controls.Add(lblStatusBar)
-        Panel2.Location = New Point(0, 494)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(700, 26)
-        Panel2.TabIndex = 2
-        ' 
-        ' dgvMotorAktif
-        ' 
-        dgvMotorAktif.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        dgvMotorAktif.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = SystemColors.Window
-        DataGridViewCellStyle9.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle9.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
-        DataGridViewCellStyle9.SelectionForeColor = Color.White
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.False
-        dgvMotorAktif.DefaultCellStyle = DataGridViewCellStyle9
-        dgvMotorAktif.Location = New Point(0, 6)
-        dgvMotorAktif.Name = "dgvMotorAktif"
-        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        DataGridViewCellStyle10.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle10.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
-        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.True
-        dgvMotorAktif.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
-        dgvMotorAktif.Size = New Size(692, 402)
-        dgvMotorAktif.TabIndex = 31
-        ' 
-        ' dgvMotorSelesai
-        ' 
-        dgvMotorSelesai.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        dgvMotorSelesai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = SystemColors.Window
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle11.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
-        DataGridViewCellStyle11.SelectionForeColor = Color.White
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.False
-        dgvMotorSelesai.DefaultCellStyle = DataGridViewCellStyle11
-        dgvMotorSelesai.Location = New Point(0, 1)
-        dgvMotorSelesai.Name = "dgvMotorSelesai"
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
-        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.True
-        dgvMotorSelesai.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
-        dgvMotorSelesai.Size = New Size(692, 402)
-        dgvMotorSelesai.TabIndex = 32
-        ' 
         ' Guna2Button5
         ' 
         Guna2Button5.BorderColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
         Guna2Button5.BorderRadius = 5
-        Guna2Button5.CustomizableEdges = CustomizableEdges5
+        Guna2Button5.CustomizableEdges = CustomizableEdges1
         Guna2Button5.DisabledState.BorderColor = Color.DarkGray
         Guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -181,10 +178,19 @@ Partial Class FormDaftarMotor
         Guna2Button5.Location = New Point(10, 7)
         Guna2Button5.Name = "Guna2Button5"
         Guna2Button5.PressedColor = Color.FromArgb(CByte(40), CByte(30), CByte(10))
-        Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button5.Size = New Size(100, 28)
         Guna2Button5.TabIndex = 24
         Guna2Button5.Text = "REFRESH"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(13), CByte(15), CByte(24))
+        Panel2.Controls.Add(lblStatusBar)
+        Panel2.Location = New Point(0, 494)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(700, 26)
+        Panel2.TabIndex = 2
         ' 
         ' lblStatusBar
         ' 
@@ -206,15 +212,16 @@ Partial Class FormDaftarMotor
         Controls.Add(Panel1)
         Controls.Add(tabMotor)
         Name = "FormDaftarMotor"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormDaftarMotor"
         tabMotor.ResumeLayout(False)
         tabAktif.ResumeLayout(False)
+        CType(dgvMotorAktif, ComponentModel.ISupportInitialize).EndInit()
         tabSelesai.ResumeLayout(False)
+        CType(dgvMotorSelesai, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(dgvMotorAktif, ComponentModel.ISupportInitialize).EndInit()
-        CType(dgvMotorSelesai, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 

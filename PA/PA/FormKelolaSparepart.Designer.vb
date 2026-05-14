@@ -22,6 +22,7 @@ Partial Class FormKelolaSparepart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -65,10 +66,12 @@ Partial Class FormKelolaSparepart
         Label8 = New Label()
         txtStok = New Guna.UI2.WinForms.Guna2TextBox()
         Label5 = New Label()
+        ErrorProvider1 = New ErrorProvider(components)
         CType(dgvSparepart, ComponentModel.ISupportInitialize).BeginInit()
         pnlKanan.SuspendLayout()
         Panel1.SuspendLayout()
         pnlKiri.SuspendLayout()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label7
@@ -150,8 +153,9 @@ Partial Class FormKelolaSparepart
         cboMerk.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cboMerk.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cboMerk.Font = New Font("Segoe UI", 10F)
-        cboMerk.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboMerk.ForeColor = Color.LightSlateGray
         cboMerk.ItemHeight = 22
+        cboMerk.Items.AddRange(New Object() {"Honda", "Yamaha", "Suzuki", "Kawasaki"})
         cboMerk.Location = New Point(14, 243)
         cboMerk.Name = "cboMerk"
         cboMerk.ShadowDecoration.CustomizableEdges = CustomizableEdges8
@@ -171,6 +175,7 @@ Partial Class FormKelolaSparepart
         txtHarga.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         txtHarga.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtHarga.Font = New Font("Segoe UI", 9F)
+        txtHarga.ForeColor = Color.LightSlateGray
         txtHarga.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtHarga.Location = New Point(14, 312)
         txtHarga.Name = "txtHarga"
@@ -193,6 +198,7 @@ Partial Class FormKelolaSparepart
         txtKategori.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         txtKategori.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtKategori.Font = New Font("Segoe UI", 9F)
+        txtKategori.ForeColor = Color.LightSlateGray
         txtKategori.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtKategori.Location = New Point(14, 176)
         txtKategori.Name = "txtKategori"
@@ -215,6 +221,7 @@ Partial Class FormKelolaSparepart
         txtNamaPart.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         txtNamaPart.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtNamaPart.Font = New Font("Segoe UI", 9F)
+        txtNamaPart.ForeColor = Color.LightSlateGray
         txtNamaPart.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtNamaPart.Location = New Point(14, 111)
         txtNamaPart.Name = "txtNamaPart"
@@ -226,6 +233,11 @@ Partial Class FormKelolaSparepart
         ' 
         ' dgvSparepart
         ' 
+        dgvSparepart.AllowUserToAddRows = False
+        dgvSparepart.AllowUserToDeleteRows = False
+        dgvSparepart.AllowUserToResizeColumns = False
+        dgvSparepart.AllowUserToResizeRows = False
+        dgvSparepart.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvSparepart.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
         dgvSparepart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
@@ -236,9 +248,12 @@ Partial Class FormKelolaSparepart
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
         dgvSparepart.DefaultCellStyle = DataGridViewCellStyle1
-        dgvSparepart.Location = New Point(15, 88)
+        dgvSparepart.Location = New Point(28, 88)
         dgvSparepart.Name = "dgvSparepart"
-        dgvSparepart.Size = New Size(524, 443)
+        dgvSparepart.ReadOnly = True
+        dgvSparepart.RowHeadersVisible = False
+        dgvSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvSparepart.Size = New Size(511, 443)
         dgvSparepart.TabIndex = 2
         ' 
         ' pnlKanan
@@ -246,19 +261,21 @@ Partial Class FormKelolaSparepart
         pnlKanan.BackColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
         pnlKanan.Controls.Add(dgvSparepart)
         pnlKanan.Controls.Add(Panel1)
+        pnlKanan.Dock = DockStyle.Fill
         pnlKanan.Location = New Point(247, 0)
         pnlKanan.Name = "pnlKanan"
-        pnlKanan.Size = New Size(557, 544)
+        pnlKanan.Size = New Size(556, 543)
         pnlKanan.TabIndex = 3
         ' 
         ' Panel1
         ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.Controls.Add(cboFilter)
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(txtCari)
         Panel1.Location = New Point(15, 10)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(524, 62)
+        Panel1.Size = New Size(523, 62)
         Panel1.TabIndex = 1
         ' 
         ' cboFilter
@@ -272,13 +289,15 @@ Partial Class FormKelolaSparepart
         cboFilter.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         cboFilter.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         cboFilter.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cboFilter.Font = New Font("Segoe UI", 10F)
-        cboFilter.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cboFilter.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cboFilter.ForeColor = Color.LightSlateGray
         cboFilter.ItemHeight = 22
-        cboFilter.Location = New Point(400, 18)
+        cboFilter.Items.AddRange(New Object() {"Semua Merk", "Honda", "Yamaha", "Suzuki", "Kawasaki"})
+        cboFilter.Location = New Point(363, 18)
         cboFilter.Name = "cboFilter"
         cboFilter.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        cboFilter.Size = New Size(117, 28)
+        cboFilter.Size = New Size(154, 28)
+        cboFilter.StartIndex = 0
         cboFilter.TabIndex = 15
         ' 
         ' txtCari
@@ -293,9 +312,10 @@ Partial Class FormKelolaSparepart
         txtCari.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCari.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         txtCari.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCari.Font = New Font("Segoe UI", 9F)
+        txtCari.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtCari.ForeColor = Color.LightSlateGray
         txtCari.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCari.Location = New Point(264, 18)
+        txtCari.Location = New Point(225, 18)
         txtCari.Name = "txtCari"
         txtCari.PlaceholderText = ""
         txtCari.SelectedText = ""
@@ -376,10 +396,11 @@ Partial Class FormKelolaSparepart
         pnlKiri.Controls.Add(Label3)
         pnlKiri.Controls.Add(Label2)
         pnlKiri.Controls.Add(Label1)
+        pnlKiri.Dock = DockStyle.Left
         pnlKiri.ForeColor = SystemColors.ActiveCaptionText
         pnlKiri.Location = New Point(0, 0)
         pnlKiri.Name = "pnlKiri"
-        pnlKiri.Size = New Size(247, 544)
+        pnlKiri.Size = New Size(247, 543)
         pnlKiri.TabIndex = 2
         ' 
         ' Label8
@@ -406,6 +427,7 @@ Partial Class FormKelolaSparepart
         txtStok.FillColor = Color.FromArgb(CByte(26), CByte(29), CByte(42))
         txtStok.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtStok.Font = New Font("Segoe UI", 9F)
+        txtStok.ForeColor = Color.LightSlateGray
         txtStok.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtStok.Location = New Point(14, 385)
         txtStok.Name = "txtStok"
@@ -426,6 +448,11 @@ Partial Class FormKelolaSparepart
         Label5.TabIndex = 13
         Label5.Text = "Stok"
         ' 
+        ' ErrorProvider1
+        ' 
+        ErrorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink
+        ErrorProvider1.ContainerControl = Me
+        ' 
         ' FormKelolaSparepart
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -434,6 +461,7 @@ Partial Class FormKelolaSparepart
         Controls.Add(pnlKanan)
         Controls.Add(pnlKiri)
         Name = "FormKelolaSparepart"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "FormKelolaSparepart"
         CType(dgvSparepart, ComponentModel.ISupportInitialize).EndInit()
         pnlKanan.ResumeLayout(False)
@@ -441,6 +469,7 @@ Partial Class FormKelolaSparepart
         Panel1.PerformLayout()
         pnlKiri.ResumeLayout(False)
         pnlKiri.PerformLayout()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -466,4 +495,5 @@ Partial Class FormKelolaSparepart
     Friend WithEvents Label8 As Label
     Friend WithEvents cboFilter As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents txtCari As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class
