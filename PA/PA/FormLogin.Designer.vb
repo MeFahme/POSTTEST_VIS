@@ -114,10 +114,10 @@ Partial Class FormLogin
         btnLogin.FillColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
         btnLogin.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(50, 270)
+        btnLogin.Location = New Point(50, 283)
         btnLogin.Name = "btnLogin"
         btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btnLogin.Size = New Size(420, 40)
+        btnLogin.Size = New Size(420, 39)
         btnLogin.TabIndex = 2
         btnLogin.Text = "MASUK"
         ' 
@@ -133,16 +133,18 @@ Partial Class FormLogin
         txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPassword.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPassword.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtPassword.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtPassword.ForeColor = Color.LightSlateGray
         txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPassword.Location = New Point(50, 218)
+        txtPassword.Location = New Point(50, 215)
+        txtPassword.Margin = New Padding(4)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "*"c
-        txtPassword.PlaceholderText = ""
+        txtPassword.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtPassword.PlaceholderText = "Masukkan Password..."
         txtPassword.SelectedText = ""
         txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        txtPassword.Size = New Size(420, 29)
+        txtPassword.Size = New Size(420, 39)
         txtPassword.TabIndex = 1
         ' 
         ' txtUsername
@@ -157,15 +159,17 @@ Partial Class FormLogin
         txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtUsername.FillColor = Color.FromArgb(CByte(27), CByte(34), CByte(54))
         txtUsername.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUsername.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtUsername.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtUsername.ForeColor = Color.LightSlateGray
         txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUsername.Location = New Point(50, 148)
+        txtUsername.Location = New Point(50, 146)
+        txtUsername.Margin = New Padding(4)
         txtUsername.Name = "txtUsername"
-        txtUsername.PlaceholderText = ""
+        txtUsername.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtUsername.PlaceholderText = "Masukkan Username..."
         txtUsername.SelectedText = ""
         txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        txtUsername.Size = New Size(420, 29)
+        txtUsername.Size = New Size(420, 39)
         txtUsername.TabIndex = 0
         ' 
         ' Label6

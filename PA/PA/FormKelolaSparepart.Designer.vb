@@ -179,7 +179,8 @@ Partial Class FormKelolaSparepart
         txtHarga.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtHarga.Location = New Point(14, 312)
         txtHarga.Name = "txtHarga"
-        txtHarga.PlaceholderText = ""
+        txtHarga.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtHarga.PlaceholderText = "Masukkan Harga..."
         txtHarga.SelectedText = ""
         txtHarga.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtHarga.Size = New Size(217, 28)
@@ -202,7 +203,8 @@ Partial Class FormKelolaSparepart
         txtKategori.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtKategori.Location = New Point(14, 176)
         txtKategori.Name = "txtKategori"
-        txtKategori.PlaceholderText = ""
+        txtKategori.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtKategori.PlaceholderText = "Masukkan Kategori..."
         txtKategori.SelectedText = ""
         txtKategori.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtKategori.Size = New Size(217, 28)
@@ -225,7 +227,8 @@ Partial Class FormKelolaSparepart
         txtNamaPart.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtNamaPart.Location = New Point(14, 111)
         txtNamaPart.Name = "txtNamaPart"
-        txtNamaPart.PlaceholderText = ""
+        txtNamaPart.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtNamaPart.PlaceholderText = "Masukkan Part..."
         txtNamaPart.SelectedText = ""
         txtNamaPart.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         txtNamaPart.Size = New Size(217, 28)
@@ -317,7 +320,8 @@ Partial Class FormKelolaSparepart
         txtCari.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtCari.Location = New Point(225, 18)
         txtCari.Name = "txtCari"
-        txtCari.PlaceholderText = ""
+        txtCari.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtCari.PlaceholderText = "Cari Part..."
         txtCari.SelectedText = ""
         txtCari.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtCari.Size = New Size(117, 28)
@@ -431,7 +435,8 @@ Partial Class FormKelolaSparepart
         txtStok.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtStok.Location = New Point(14, 385)
         txtStok.Name = "txtStok"
-        txtStok.PlaceholderText = ""
+        txtStok.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtStok.PlaceholderText = "Masukkan Stok"
         txtStok.SelectedText = ""
         txtStok.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         txtStok.Size = New Size(217, 28)

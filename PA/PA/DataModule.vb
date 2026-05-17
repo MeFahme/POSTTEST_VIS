@@ -39,7 +39,6 @@ Module DataModule
             TutupKoneksi()
         End Try
     End Sub
-
     Public Function EksekusiSQL(query As String, params As MySqlParameter()) As Boolean
         Try
             BukaKoneksi()
@@ -54,16 +53,18 @@ Module DataModule
             TutupKoneksi()
         End Try
     End Function
-
-    Public Sub FilterDGV(query As String, dgv As DataGridView)
+    Public Sub LoadToComboBox(query As String, cbo As ComboBox, displayMember As String, valueMember As String)
         Try
             BukaKoneksi()
             Dim adapter As New MySqlDataAdapter(query, conn)
             Dim dt As New DataTable
             adapter.Fill(dt)
-            dgv.DataSource = dt
+            cbo.DataSource = dt
+            cbo.DisplayMember = displayMember
+            cbo.ValueMember = valueMember
+            cbo.SelectedIndex = -1
         Catch ex As Exception
-            MsgBox("Gagal memfilter data: " & ex.Message)
+            MsgBox("Gagal load combo: " & ex.Message)
         Finally
             TutupKoneksi()
         End Try

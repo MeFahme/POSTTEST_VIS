@@ -22,6 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -38,6 +39,8 @@ Partial Class FormMain
         mnuLogout = New ToolStripMenuItem()
         pnlToolbar = New Panel()
         btnRefresh = New Guna.UI2.WinForms.Guna2Button()
+        lblJam = New Label()
+        lblTanggal = New Label()
         pnlDashboard = New Panel()
         dgvStatusMotor = New DataGridView()
         Label9 = New Label()
@@ -56,6 +59,7 @@ Partial Class FormMain
         Label4 = New Label()
         lblTotalTrx = New Label()
         Panel4 = New Panel()
+        tmrJam = New Timer(components)
         mnuStrip.SuspendLayout()
         pnlToolbar.SuspendLayout()
         pnlDashboard.SuspendLayout()
@@ -72,7 +76,7 @@ Partial Class FormMain
         mnuStrip.Items.AddRange(New ToolStripItem() {mnuDashboard, mnuKelolaUser, mnuSparepart, mnuLaporan, mnuTransaksi, mnuRiwayat, mnuDaftarMotor, mnuDetailServis, mnuUser, mnuLogout})
         mnuStrip.Location = New Point(0, 0)
         mnuStrip.Name = "mnuStrip"
-        mnuStrip.Size = New Size(974, 25)
+        mnuStrip.Size = New Size(1024, 25)
         mnuStrip.TabIndex = 0
         mnuStrip.Text = "MenuStrip1"
         ' 
@@ -162,10 +166,12 @@ Partial Class FormMain
         ' 
         pnlToolbar.BackColor = Color.FromArgb(CByte(24), CByte(27), CByte(40))
         pnlToolbar.Controls.Add(btnRefresh)
+        pnlToolbar.Controls.Add(lblJam)
+        pnlToolbar.Controls.Add(lblTanggal)
         pnlToolbar.Dock = DockStyle.Top
         pnlToolbar.Location = New Point(0, 25)
         pnlToolbar.Name = "pnlToolbar"
-        pnlToolbar.Size = New Size(974, 51)
+        pnlToolbar.Size = New Size(1024, 51)
         pnlToolbar.TabIndex = 1
         ' 
         ' btnRefresh
@@ -188,6 +194,30 @@ Partial Class FormMain
         btnRefresh.TabIndex = 0
         btnRefresh.Text = "↻  Refresh"
         ' 
+        ' lblJam
+        ' 
+        lblJam.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblJam.AutoSize = True
+        lblJam.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblJam.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
+        lblJam.Location = New Point(969, 18)
+        lblJam.Name = "lblJam"
+        lblJam.Size = New Size(40, 17)
+        lblJam.TabIndex = 7
+        lblJam.Text = "00:00"
+        ' 
+        ' lblTanggal
+        ' 
+        lblTanggal.Anchor = AnchorStyles.Top
+        lblTanggal.AutoSize = True
+        lblTanggal.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTanggal.ForeColor = Color.FromArgb(CByte(85), CByte(102), CByte(119))
+        lblTanggal.Location = New Point(445, 18)
+        lblTanggal.Name = "lblTanggal"
+        lblTanggal.Size = New Size(126, 17)
+        lblTanggal.TabIndex = 6
+        lblTanggal.Text = "Senin, 14 May 2026"
+        ' 
         ' pnlDashboard
         ' 
         pnlDashboard.BackColor = Color.FromArgb(CByte(15), CByte(17), CByte(23))
@@ -199,7 +229,7 @@ Partial Class FormMain
         pnlDashboard.Dock = DockStyle.Fill
         pnlDashboard.Location = New Point(0, 76)
         pnlDashboard.Name = "pnlDashboard"
-        pnlDashboard.Size = New Size(974, 531)
+        pnlDashboard.Size = New Size(1024, 585)
         pnlDashboard.TabIndex = 2
         ' 
         ' dgvStatusMotor
@@ -225,7 +255,7 @@ Partial Class FormMain
         dgvStatusMotor.ReadOnly = True
         dgvStatusMotor.RowHeadersVisible = False
         dgvStatusMotor.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvStatusMotor.Size = New Size(940, 260)
+        dgvStatusMotor.Size = New Size(990, 314)
         dgvStatusMotor.TabIndex = 4
         ' 
         ' Label9
@@ -393,14 +423,20 @@ Partial Class FormMain
         Panel4.Size = New Size(10, 86)
         Panel4.TabIndex = 0
         ' 
+        ' tmrJam
+        ' 
+        tmrJam.Enabled = True
+        tmrJam.Interval = 1000
+        ' 
         ' FormMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(974, 607)
+        ClientSize = New Size(1024, 661)
         Controls.Add(pnlDashboard)
         Controls.Add(pnlToolbar)
         Controls.Add(mnuStrip)
+        MinimumSize = New Size(1040, 700)
         Name = "FormMain"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FormMain"
@@ -408,6 +444,7 @@ Partial Class FormMain
         mnuStrip.ResumeLayout(False)
         mnuStrip.PerformLayout()
         pnlToolbar.ResumeLayout(False)
+        pnlToolbar.PerformLayout()
         pnlDashboard.ResumeLayout(False)
         pnlDashboard.PerformLayout()
         CType(dgvStatusMotor, ComponentModel.ISupportInitialize).EndInit()
@@ -453,4 +490,7 @@ Partial Class FormMain
     Friend WithEvents Label9 As Label
     Friend WithEvents dgvStatusMotor As DataGridView
     Friend WithEvents mnuLogout As ToolStripMenuItem
+    Friend WithEvents lblJam As Label
+    Friend WithEvents lblTanggal As Label
+    Friend WithEvents tmrJam As Timer
 End Class

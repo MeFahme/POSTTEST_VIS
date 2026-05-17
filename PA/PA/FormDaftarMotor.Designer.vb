@@ -26,6 +26,7 @@ Partial Class FormDaftarMotor
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         tabMotor = New Guna.UI2.WinForms.Guna2TabControl()
@@ -37,6 +38,7 @@ Partial Class FormDaftarMotor
         Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
         Panel2 = New Panel()
         lblStatusBar = New Label()
+        Panel3 = New Panel()
         tabMotor.SuspendLayout()
         tabAktif.SuspendLayout()
         CType(dgvMotorAktif, ComponentModel.ISupportInitialize).BeginInit()
@@ -44,14 +46,16 @@ Partial Class FormDaftarMotor
         CType(dgvMotorSelesai, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' tabMotor
         ' 
         tabMotor.Controls.Add(tabAktif)
         tabMotor.Controls.Add(tabSelesai)
+        tabMotor.Dock = DockStyle.Fill
         tabMotor.ItemSize = New Size(180, 40)
-        tabMotor.Location = New Point(0, 42)
+        tabMotor.Location = New Point(0, 0)
         tabMotor.Name = "tabMotor"
         tabMotor.SelectedIndex = 0
         tabMotor.Size = New Size(700, 452)
@@ -88,17 +92,22 @@ Partial Class FormDaftarMotor
         ' 
         ' dgvMotorAktif
         ' 
+        dgvMotorAktif.AllowUserToAddRows = False
+        dgvMotorAktif.AllowUserToDeleteRows = False
+        dgvMotorAktif.AllowUserToResizeColumns = False
+        dgvMotorAktif.AllowUserToResizeRows = False
         dgvMotorAktif.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
         dgvMotorAktif.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
         dgvMotorAktif.DefaultCellStyle = DataGridViewCellStyle1
-        dgvMotorAktif.Location = New Point(0, 6)
+        dgvMotorAktif.Dock = DockStyle.Fill
+        dgvMotorAktif.Location = New Point(3, 3)
         dgvMotorAktif.Name = "dgvMotorAktif"
         dgvMotorAktif.ReadOnly = True
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
@@ -111,7 +120,7 @@ Partial Class FormDaftarMotor
         dgvMotorAktif.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvMotorAktif.RowHeadersVisible = False
         dgvMotorAktif.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvMotorAktif.Size = New Size(692, 402)
+        dgvMotorAktif.Size = New Size(686, 398)
         dgvMotorAktif.TabIndex = 31
         ' 
         ' tabSelesai
@@ -127,36 +136,48 @@ Partial Class FormDaftarMotor
         ' 
         ' dgvMotorSelesai
         ' 
-        dgvMotorSelesai.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
-        dgvMotorSelesai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
+        dgvMotorSelesai.AllowUserToAddRows = False
+        dgvMotorSelesai.AllowUserToDeleteRows = False
+        dgvMotorSelesai.AllowUserToResizeColumns = False
+        dgvMotorSelesai.AllowUserToResizeRows = False
+        DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle3.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
         DataGridViewCellStyle3.SelectionForeColor = Color.White
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        dgvMotorSelesai.DefaultCellStyle = DataGridViewCellStyle3
-        dgvMotorSelesai.Location = New Point(0, 1)
-        dgvMotorSelesai.Name = "dgvMotorSelesai"
-        dgvMotorSelesai.ReadOnly = True
+        dgvMotorSelesai.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        dgvMotorSelesai.BackgroundColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        dgvMotorSelesai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        dgvMotorSelesai.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(CByte(38), CByte(41), CByte(58))
+        DataGridViewCellStyle4.SelectionForeColor = Color.White
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        dgvMotorSelesai.DefaultCellStyle = DataGridViewCellStyle4
+        dgvMotorSelesai.Dock = DockStyle.Fill
+        dgvMotorSelesai.Location = New Point(3, 3)
+        dgvMotorSelesai.Name = "dgvMotorSelesai"
+        dgvMotorSelesai.ReadOnly = True
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(19), CByte(21), CByte(31))
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(138), CByte(153), CByte(153))
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        dgvMotorSelesai.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         dgvMotorSelesai.RowHeadersVisible = False
         dgvMotorSelesai.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvMotorSelesai.Size = New Size(692, 402)
+        dgvMotorSelesai.Size = New Size(686, 398)
         dgvMotorSelesai.TabIndex = 32
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(24), CByte(27), CByte(40))
         Panel1.Controls.Add(Guna2Button5)
+        Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(700, 42)
@@ -187,6 +208,7 @@ Partial Class FormDaftarMotor
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(13), CByte(15), CByte(24))
         Panel2.Controls.Add(lblStatusBar)
+        Panel2.Dock = DockStyle.Bottom
         Panel2.Location = New Point(0, 494)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(700, 26)
@@ -203,14 +225,24 @@ Partial Class FormDaftarMotor
         lblStatusBar.TabIndex = 26
         lblStatusBar.Text = "Motor aktif: 0"
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(24), CByte(27), CByte(40))
+        Panel3.Controls.Add(tabMotor)
+        Panel3.Dock = DockStyle.Fill
+        Panel3.Location = New Point(0, 42)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(700, 452)
+        Panel3.TabIndex = 25
+        ' 
         ' FormDaftarMotor
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(700, 520)
+        Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Controls.Add(tabMotor)
         Name = "FormDaftarMotor"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FormDaftarMotor"
@@ -222,6 +254,7 @@ Partial Class FormDaftarMotor
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -234,4 +267,5 @@ Partial Class FormDaftarMotor
     Friend WithEvents dgvMotorSelesai As DataGridView
     Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblStatusBar As Label
+    Friend WithEvents Panel3 As Panel
 End Class

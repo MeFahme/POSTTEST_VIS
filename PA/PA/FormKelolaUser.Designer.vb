@@ -198,7 +198,8 @@ Partial Class FormKelolaUser
         txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPassword.Location = New Point(14, 246)
         txtPassword.Name = "txtPassword"
-        txtPassword.PlaceholderText = ""
+        txtPassword.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtPassword.PlaceholderText = "Masukkan Password..."
         txtPassword.SelectedText = ""
         txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtPassword.Size = New Size(217, 28)
@@ -221,7 +222,8 @@ Partial Class FormKelolaUser
         txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.Location = New Point(14, 178)
         txtUsername.Name = "txtUsername"
-        txtUsername.PlaceholderText = ""
+        txtUsername.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtUsername.PlaceholderText = "Masukkan Username..."
         txtUsername.SelectedText = ""
         txtUsername.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtUsername.Size = New Size(217, 28)
@@ -244,7 +246,8 @@ Partial Class FormKelolaUser
         txtNama.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtNama.Location = New Point(14, 113)
         txtNama.Name = "txtNama"
-        txtNama.PlaceholderText = ""
+        txtNama.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtNama.PlaceholderText = "Masukkan Nama Lengkap..."
         txtNama.SelectedText = ""
         txtNama.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         txtNama.Size = New Size(217, 28)
@@ -393,7 +396,8 @@ Partial Class FormKelolaUser
         txtCari.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtCari.Location = New Point(258, 17)
         txtCari.Name = "txtCari"
-        txtCari.PlaceholderText = ""
+        txtCari.PlaceholderForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        txtCari.PlaceholderText = "Cari Username..."
         txtCari.SelectedText = ""
         txtCari.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtCari.Size = New Size(117, 28)
